@@ -1,18 +1,17 @@
 <?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="tohtml-q1.xsl"?>
 
 <!DOCTYPE course [
-      <!ELEMENT course (name, duration, unit+) >
-      <!ELEMENT name (#PCDATA) >
-      <!ELEMENT unit (title, lecturer*, tutor*) >
-      <!ELEMENT title (#PCDATA) >
-      <!ELEMENT lecturer (surname, othernames?, email*) >
-      <!ELEMENT tutor (surname, othernames?, email*) >
-      <!ELEMENT surname (#PCDATA) >
-      <!ATTLIST surname language CDATA "English" >
-      <!ELEMENT othernames (#PCDATA) >
-      <!ATTLIST othernames language CDATA "English" >
-      <!ELEMENT email (#PCDATA) >
+     <!ELEMENT course (name, duration, unit+) >
+     <!ELEMENT name (#PCDATA) >
+     <!ELEMENT unit (title, lecturer*, tutor*) >
+     <!ELEMENT title (#PCDATA) >
+     <!ELEMENT lecturer (surname, othernames?, email*) >
+     <!ELEMENT tutor (surname, othernames?, email*) >
+     <!ELEMENT surname (#PCDATA) >
+     <!ATTLIST surname language CDATA "English" >
+     <!ELEMENT othernames (#PCDATA) >
+     <!ATTLIST othernames language CDATA "English" >
+     <!ELEMENT email (#PCDATA) >
 ]>
 
 <course>
