@@ -21,8 +21,10 @@
      <name>Bachelor of Science - Internet Computing</name>
      <duration>3 years</duration>
      <unit>
-          <unitcode>ICT375</unitcode>
-          <unitname>Advanced Web Programming</unitname>
+          <title>
+               <unitcode>ICT375</unitcode>
+               <unitname>Advanced Web Programming</unitname>
+          </title>
           <lecturer>
               <surname language="English">Xie</surname>
               <othernames language="English">Hong</othernames>
@@ -30,8 +32,10 @@
           </lecturer>
      </unit>
      <unit>
-          <unitcode>ICT108</unitcode>
-          <unitname>Introduction to Multimedia and the Internet</unitname> 
+          <title>
+               <unitcode>ICT108</unitcode>
+               <unitname>Introduction to Multimedia and the Internet</unitname> 
+          </title>
           <lecturer>
               <surname>Rai</surname>
               <othernames>Shri</othernames>

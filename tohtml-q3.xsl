@@ -20,8 +20,8 @@
 
   <xsl:template match="unit">    
 	<p>
-      The unit code is: <xsl:value-of select="unitcode"/><br/>
-      The unit title is: <xsl:value-of select="unitname"/> <br/>
+      The unit code is: <xsl:value-of select="title/unitcode"/><br/>
+      The unit title is: <xsl:value-of select="title/unitname"/> <br/>
        <xsl:value-of select="lecturer/surname"/>, 
         <xsl:value-of select="lecturer/othernames"/> 
         (<xsl:value-of select="lecturer/email"/>) <br/>
