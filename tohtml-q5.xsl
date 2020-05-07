@@ -4,12 +4,6 @@
 
   <xsl:template match="/">
 	<HTML>
-    <!-- <style>
-                table {table-layout: auto; text-align:left; margin-left: auto; margin-right: auto;}
-                td, th {border:1px single silver; padding:5px; width:15%px;}
-                p { font-family:Verdana; font-size:10px; color:silver;margin-bottom;0px;}
-
-        </style> -->
     <BODY>    
         <xsl:apply-templates/>
     </BODY>
@@ -17,37 +11,40 @@
   </xsl:template>
 
   <xsl:template match="name">    
-	<H3><xsl:value-of select="."/></H3>
+  	<H3><xsl:value-of select="."/></H3>
   </xsl:template>
 
   <xsl:template match="duration">    
-	<h3> This course runs for: <xsl:value-of select="."/></h3>
+  	<h3> This course runs for: <xsl:value-of select="."/></h3>
     
   </xsl:template>
 
-   <xsl:template match="unit">
+  <xsl:template match="course">
+      <table width="100%" border="1" >
+        <thead>
+        <tr>
+            <th>Unit Code</th>
+            <th>Unit Name</th>
+            <th>Surname</th>
+            <th>Othernames</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+          <xsl:apply-templates match="unit"/>
+        </tbody>
+      </table>
+  </xsl:template>
 
-        <table width="100%" border="1" >
-            <thead>
-            <tr>
-                <th>Unit Code</th>
-                <th>Unit Name</th>
-                <th>Surname</th>
-                <th>Othernames</th>
-                <th>Email</th>
-            </tr>
-            </thead>
-                <tbody>
-                <tr>
-                    <td><xsl:value-of select="title/unitcode"/></td>
-                    <td><xsl:value-of select="title/unitname"/></td>
-                    <td><xsl:value-of select="lecturer/surname"/></td>
-                    <td><xsl:value-of select="lecturer/othernames"/></td>
-                    <td><xsl:value-of select="lecturer/email"/></td>
-                </tr>
-                </tbody>
-            </table>
-    </xsl:template>
+    <xsl:template match="unit">
+    <tr>
+        <td><xsl:value-of select="title/unitcode"/></td>
+        <td><xsl:value-of select="title/unitname"/></td>
+        <td><xsl:value-of select="lecturer/surname"/></td>
+        <td><xsl:value-of select="lecturer/othernames"/></td>
+        <td><xsl:value-of select="lecturer/email"/></td>
+    </tr>
+  </xsl:template>
 
   <xsl:template match="text()|@*">    
 	<!-- Do nothing -->
